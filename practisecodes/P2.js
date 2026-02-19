@@ -1,25 +1,28 @@
-//reverse a number
-let number = 12345
-let reverse = 0
+//p - digit counting
 
-while(number>0){
-    let lastDigit = number%10;
-    reverse = reverse*10 + lastDigit;
-    number = Math.floor(number/10)
-}
+//first method
+let number = 123456
+let count = 0
 
-console.log(reverse)
-
-//another merthod
-let n = 4567
-let reverseNum  = ""
-
-function reverseNumber(n){
-    let str = String(n).split("")
-    for(let i=str.length-1; i>=0; i--){
-        reverseNum+= str[i]
+if(number===0){
+    count = 1
+}else{
+    while(number>0){
+        number = Math.floor(number/10)
+        count++
     }
-    return Number(reverseNum)
 }
 
-console.log(reverseNumber(n))
+console.log(count)
+
+//another method
+function countDigit(num){
+    let count = 0
+    let newNum = (num+"").split("")
+    for(let i=0; i<newNum.length; i++){
+        count++
+    }
+    return count
+}
+
+console.log(countDigit(123456789))
