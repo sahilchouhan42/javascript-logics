@@ -1,14 +1,14 @@
-//revrse a number 
+//revrse a number
 
-// let number = 1234
-// let reverse  = 0
+let number = 1234
+let reverse  = 0
 
-// while(number>0){
-//     let lastDigit = number%10
-//     reverse = reverse*10+lastDigit
-//     number = Math.floor(number/10)
-// }
-// console.log(reverse)
+while(number>0){
+    let lastDigit = number%10
+    reverse = reverse*10+lastDigit
+    number = Math.floor(number/10)
+}
+console.log(reverse)
 
 
 //using string
